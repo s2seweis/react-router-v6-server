@@ -16,4 +16,8 @@ app.use('/api/settings/', require('./routes/settingsRoute'));
 
 app.get('/', (req, res) => res.send('Hello World'));
 
+app.get('/greeting', (req, res) => {
+    res.json({ greeting: 'Hello'})
+})
+
 app.listen(port, () => console.log(`Node JS Server Started in Port ${port}`));
