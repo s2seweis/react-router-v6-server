@@ -7,7 +7,7 @@ app.use(express.json());
 require('dotenv').config();
 
 // Use cors middleware to enable CORS for all routes
-app.use(cors());
+app.use(cors({origin: 'https://localhost:3000'}));
 
 // ### Route for JWT Authentication
 app.use('/api/users/', require('./routes/usersRoute'));
